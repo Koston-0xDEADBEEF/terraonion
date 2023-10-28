@@ -23,3 +23,10 @@ jobs:
 
     - name: Build
       run: cd cmd/neosd ; go build -v ./...
+
+    - name: Upload binary
+      uses: actions/upload-artifact@v3
+      with:
+        name: neosd
+        path: cmd/neosd/neosd
+        retention-days: 14
