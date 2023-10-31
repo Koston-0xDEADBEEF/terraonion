@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: pguyot/arm-runner-action@v2
+    - uses: pguyot/arm-runner-action@HEAD
       with:
-        # This one is segfaulting..
-        #base_image: raspi_2_bullseye:20230102
+        # plz work
+        base_image: raspios_lite:2023-05-03
         image_additional_mb: 1024
         commands: |
           apt-get install -y golang zlib1g-dev
